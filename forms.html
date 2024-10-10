@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <form action="">
+        <h2>Form starts here.</h2>
+        <h3>Other HTML is fine, too.</h3>
+    </form>
+    <p><input type="text" value="googoo"></p>
+
+
+    <h2>Another sample form.</h2>
+    <form action="">
+        <legend>Personal Data</legend>
+
+        <p>
+            <label for="">Name:</label>
+            <input type="text">
+        </p>
+
+        <p>
+            <label for="">Address:</label>
+            <input type="text">
+        </p>
+
+        <p>
+            <label for="">Phone:</label>
+            <input type="text">
+        </p>
+
+    </form>
+
+    <h2>Password input</h2>
+    <form action="">
+        <p>
+            <label for="">Name</label>
+            <input type="text"
+                    id = "txtName" 
+                    value = "Jonas">
+        </p>
+        <fieldset>
+            <legend>Enter a password</legend>
+            <p>
+                <label for="">Type password:</label>
+                <input type="password"
+                        id = "pwd" 
+                        value = "secret">
+            </p>
+        </fieldset>
+    </form>
+
+    <h2>Multi-line text input</h2>
+    <form action="">
+        <fieldset>
+            <legend>Quiz</legend>
+            <p>
+                <label for="">Name</label>
+                <input type="text" id="txtName">
+            </p>
+            <p>
+                <label for="">Please enter the sum total of Western thought. Be brief.</label>
+            </p>
+            <p><textarea name="" id="txtAnswer" rows="10" cols="40"></textarea></p>
+        </fieldset>
+    </form>
+
+    <h2>Multiple Selection</h2>
+    <form action="">
+        <p>
+            <label for="">What is your favorite color?</label>
+            <select name="" id="selColor">
+                <option value="#ff0000">Red</option>
+                <option value="#00ff00">Green</option>
+                <option value="#0000ff">Blue</option>
+                <option value="#00ffff">Cyan</option>
+                <option value="#ff00ff">Magenta</option>
+                <option value="#ffff00">Yellow</option>
+                <option value="#000000">Black</option>
+                <option value="#ffffff">White</option>
+            </select>
+        </p>
+    </form>
+
+
+</body>
+</html>
