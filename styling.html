@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling</title>
+    <style>
+        h1{font-family: sans-serif; font-size: 300%;}
+        #center {text-align: center;}
+        em{background-color: yellow;}
+        .question{font: italic 150% arial, sans-serif; text-align: right;}
+        .answer{font: bold 200%;color: darkgreen;}
+        .contact{background-color: bisque;}
+        .name{font: italic 110% arial;}
+        .phone{font: 100% monospace;}
+        #special p{text-align: right;}
+        h2, h3 {font-size: 300%;}
+        input[type="text"]{background-color: azure;}
+        #redborder{border-color: red; border: 0.25em; border-style:solid;}
+        h2{border: blue 5px solid; }
+        #margin {margin: 5px; padding: 5px;}
+    </style>
+</head>
+<body>
+    <h1>Styling with CSS</h1>
+    <h1><img src="welcome.png" alt="Welcome" height="100" width="300"></h1>
+    <p>This is the paragraph. Above is H1 with image in it.</p>
+    <p id="center">You can <em>emphasize</em> and <strong>strong</strong> a word. We can do the words like A<sup>2</sup> or i<sub>0</sub>. Here emphasize is yellow because we specifically mentioned the background color of em.</p>
+    <p class="question">how do you do?</p>
+    <p class="answer question">I am fine.</p>
+    <div class="contact">
+        <span class="name">Andy</span>
+        <span class="phone">111111</span>
+    </div>
+    <div class="contact">
+        <span class="name">Elizabeth</span>
+        <span class="phone">222222</span>
+    </div>
+    <div class="contact">
+        <span class="name">MAtthew</span>
+        <span class="phone">333333</span>
+    </div>
+    <div>
+        <p>This is normal paragraph.</p>
+        <p>This is normal paragraph.</p>
+    </div>
+    <div id="special">
+        <p>This is in different div.</p>
+        <p>This is in different div.</p>
+    </div>
+    <h2>this is h2</h2>
+    <h3>this is h3 and both are styled in one box</h3>
+
+    <h2>Sample form.</h2>
+    <form action="">
+        <legend>Personal Data</legend>
+
+        <p>
+            <label for="">Name:</label>
+            <input type="text">
+        </p>
+
+        <p>
+            <label for="">Address:</label>
+            <input type="text">
+        </p>
+
+        <p>
+            <label for="">Phone:</label>
+            <input type="tel">
+        </p>
+
+    </form>
+
+    <p id="redborder">This must have border.</p>
+
+    <p id="margin">This is margin and pading.</p>
+
+    <p style="border: 1em red groove">This is local style</p>
+
+</body>
+</html>
