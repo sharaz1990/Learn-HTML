@@ -6,10 +6,21 @@
     <title>JavaScript</title>
     <link rel="stylesheet" href="myStyle.css">
     <script>
-        var person = "";
-        person = prompt("What is your name?");
-        var length = person.length
-        alert("Hi there, "+ person + "! The name " + person + " is " + length + " character long.");
+        // var person = ""; // variable is defined as var
+        // person = prompt("What is your name?"); // prompt is like input value
+        // var length = person.length // .length is property which specifiy the length of the variable, some other properties are .toUpperCase() .toLowerCase() so on
+        // alert("Hi there, "+ person + "! The name " + person + " is " + length + " character long."); // alter is like output or print in python
+
+        // var x = prompt("first number:");
+        // var y = prompt("second number:");
+        // var sum = parseFloat(x) + parseFloat(y);
+        // alert(x + " plus " + y + " equals " + sum);
+        function changeColor(color) {document.body.style.backgroundColor = color;}
+        function sayHi(){var txtName = document.getElementById("txtName");
+                        var txtOutput = document.getElementById("txtOutput");
+                        var name = txtName.value;
+                        txtOutput.value = "Hi there, " + name + "!"}
+
     </script>
 </head>
 <body>
@@ -29,8 +40,29 @@
         </div>
     </div>    
     <h1>JavaScript</h1>
-
+    <!-- <script>
+    //     document.body.style.color = "white";
+    //     document.body.style.backgroundColor = "blue";
+    // </script> -->
     
+    <h2>Click the buttons to change background colors.</h2>
+    <form action="">
+        <fieldset>
+            <input type="button" value="blue" onclick="changeColor('blue')">
+            <input type="button" value="white" onclick="changeColor('white')">
+        </fieldset>
+    </form>
+
+    <h2>Text box input and output</h2>
+
+    <form action="">
+        <fieldset>
+            <label for="">Type your name:</label>
+            <input type="text", id="txtName">
+            <input type="button", value="click me" onclick="sayHi()">
+            <input type="text" id="txtOutput">
+        </fieldset>
+    </form>
 
 </body>
 </html>
