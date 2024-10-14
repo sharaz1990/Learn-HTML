@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ants function</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <script>
+        var distractionList = Array("", "suck his thumb", "tie his shoe", "climb a tree", "shut the door");
+        function makeSong(){
+            var output = document.getElementById("output");
+            output.innerHTML = "";
+            for (verseNumber = 1; verseNumber < distractionList.length; verseNumber++) {output.innerHTML += verse(verseNumber); output.innerHTML += chorus()}
+        }
+        function chorus() {
+            var result = "...and they all go marching down <br /> to the ground <br /> to get out <br /> <br /> boom boom boom boom boom boom boom boom <br /><br />";
+            return result;
+        }
+        function verse(verseNumber) {
+            var distraction = distractionList[verseNumber];
+            var result = "The ants go for marching " + verseNumber + " by " + verseNumber + ", hurrah, hurrah <br /> The ants go marching ";
+            result += verseNumber + " by " + verseNumber + " hurrah, hurrah <br /> The ants go marching " +verseNumber + " by " + verseNumber + " <br />";
+            result += "The little one stops to " +distraction + " <br /><br />";
+            return result;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Load the header when the page loads
+        window.onload = loadHeader;
+    </script>
+    <h1>Using Basic Functions</h1>
+    <form action="">
+        <fieldset>
+            <button type="button" onclick="makeSong()">make song</button>
+        </fieldset>
+    </form>
+
+    <div id="output">The song will appear here...</div>
+</body>
+</html>

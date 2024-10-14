@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <script>
+        var output;
+        function getPassword() {
+            var correct = "HTML5";
+            var guess = "";
+            while (guess != correct) {guess = prompt("Password");}
+            alert("You may proceed")
+        }
+        function threeTries(){
+            var correct = "HTML5";
+            var guess = "";
+            var keepGoing = true;
+            var tries = 0;
+
+            while (keepGoing) {
+                guess = prompt("Password");
+                if (guess == correct) {alert("You may proceed");
+                keepGoing = false;}
+                else {
+                    tries++;
+                    if (tries>=3) {alert("Too many tries. Launching missiles...");
+                        keepGoing = false;
+                    }
+                }
+
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="header"></div>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Load the header when the page loads
+        window.onload = loadHeader;
+    </script>
+    <h1>While Loop</h1>
+    <p>The password is 'HTML5'</p>
+    <form action="">
+        <fieldset>
+            <button type="button" onclick="getPassword()">Guess the password</button>
+            <button type="button" onclick="threeTries()">Guess the password in three tries</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

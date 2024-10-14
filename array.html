@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creating Tables</title>
+    <title>Array</title>
     <link rel="stylesheet" href="myStyle.css">
+    <script>
+        var gameList = new Array("Flight Gear", "Sauerbraten", "Future Pinball", "Racer", "TORCS", "Orbiter", "Step Mania", "NetHack", "Marathon", "Crimson Fields");
+        var text = "";
+        for (i = 0; i < gameList.length; i++) {text += "I love " + gameList[i] + "\n";}
+        alert(text)
+    </script>
 </head>
 <body>
     <div id="header"></div>
@@ -22,32 +28,6 @@
         // Load the header when the page loads
         window.onload = loadHeader;
     </script>
- 
-    <!--creating tables-->
-    <h1>Creating Tables</h1>
-    <table border="1">
-        <caption>My Schedule</caption>
-        <tr>
-            <th>Hero</th>
-            <th>Power</th>
-            <th>Nemesis</th>
-        </tr>
-
-        <tr>
-            <td>The HTMLator</td>
-            <td>Standard Compliance</td>
-            <td>Sloppy Code Boy</td>
-        </tr>
-
-        <tr>
-            <td  colspan="2">Captain CSS</td>
-            <td rowspan="2">Lord Deprecated</td>
-        </tr>
-
-        <tr>
-            <td>Broswer Woman</td>
-            <td>Mega Compatibility</td>
-        </tr>
-    </table>
+    
 </body>
 </html>

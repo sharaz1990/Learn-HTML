@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript2</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <script>
+        function processForm(){
+            var txtNormal = document.getElementById("txtNormal");
+            var pwd = document.getElementById("pwd");
+            var hidden = document.getElementById("hidden");
+            var txtArea = document.getElementById("txtArea");
+            var normal = txtNormal.value;
+            var password = pwd.value;
+            var secret = hidden.value;
+            var bigText = txtArea.value;
+            var result = "<dl> \n  <dt>normal</dt> \n  <dd>" + normal + "</dd> \n\n  <dt>password</dt> \n <dd>" + password + "</dd> \n\n <dt>secret</dt> \n <dd>" + secret + "</dt> \n\n <dt>big text</dt> \n <dd>" + bigText + "</dt> \n</dl> \n"
+            var output = document.getElementById("output");
+            output.innerHTML = result;
+        }
+        function checkName(){
+                            // from ifElse.html
+                            lblOutput =
+                            document.getElementById("lblOutput");
+                            txtInput = document.getElementById("txtInput");
+                            userName = txtInput.value;
+                            if (userName == "Tim Berners-Lee"){lblOutput.innerHTML = "Thanks for inventing HTML!";} else {lblOutput.innerHTML = "Do I know you?";} // end if
+                            } // end function
+
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Load the header when the page loads
+        window.onload = loadHeader;
+    </script>
+    <h1>JavaScript2</h1>
+    
+    <h2>Text Input Devices</h2>
+    <form action="">
+        <fieldset>
+            <label for="">Normal Text Field</label>
+            <input type="text" name="" id="txtNormal">
+            <label for="">Password field</label>
+            <input type="password" name="" id="pwd">
+            <label for="">Hidden</label>
+            <input type="hidden" name="" id="hidden" value="I can't tell you">
+            <textarea name="" id="txtArea" rows="10" cols="40">This is a big text area.
+                It can hold a lot of text.
+            </textarea>
+            <button type="button" onclick="processForm()">Click Me</button>
+        </fieldset>
+    </form>
+
+    <div id="output"></div>
+
+    <h2>If demo</h2>
+    <form action="">
+        <fieldset>
+            <label for="" id="lblOutput">Please enter your name</label>
+            <input type="text" name="" id="txtInput" value="Tim Berners-Lee">
+            <button type="button" onclick="checkName()">click me</button>
+        </fieldset>
+    </form>
+</body>
+</html>

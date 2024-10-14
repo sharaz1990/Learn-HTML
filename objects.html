@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creating Tables</title>
+    <title>Objects</title>
     <link rel="stylesheet" href="myStyle.css">
+    <script>
+        class Person{
+            constructor(Name, Age){
+                this.name = Name;
+                this.age = Age;
+            }
+            talk(){
+                let msg = "Hi! My name is " + this.name + " and I'm " + this.age;
+                alert(msg);
+            }
+        }
+    
+        function main() {
+            let personA = new Person("Sharaz", 33);
+            let personB = new Person("Zeeshan", 32);
+
+            // Modify personB's properties
+            personB.name = "Osama";
+            personB.age = 35;
+
+            personA.talk();
+            personB.talk();
+        }
+        main(); 
+        
+    </script>
 </head>
 <body>
     <div id="header"></div>
@@ -22,32 +48,6 @@
         // Load the header when the page loads
         window.onload = loadHeader;
     </script>
- 
-    <!--creating tables-->
-    <h1>Creating Tables</h1>
-    <table border="1">
-        <caption>My Schedule</caption>
-        <tr>
-            <th>Hero</th>
-            <th>Power</th>
-            <th>Nemesis</th>
-        </tr>
-
-        <tr>
-            <td>The HTMLator</td>
-            <td>Standard Compliance</td>
-            <td>Sloppy Code Boy</td>
-        </tr>
-
-        <tr>
-            <td  colspan="2">Captain CSS</td>
-            <td rowspan="2">Lord Deprecated</td>
-        </tr>
-
-        <tr>
-            <td>Broswer Woman</td>
-            <td>Mega Compatibility</td>
-        </tr>
-    </table>
+    
 </body>
 </html>

@@ -20,25 +20,33 @@
                         var txtOutput = document.getElementById("txtOutput");
                         var name = txtName.value;
                         txtOutput.value = "Hi there, " + name + "!"}
+                        function sayHi(){
+                                txtName = document.getElementById("txtName2");
+                                divOutput = document.getElementById("divOutput");
+                                name = txtName.value;
+                                divOutput.innerHTML = "<em>" + name + "</em>";
+                                divOutput.innerHTML += " is a very nice name.";
+                                }
 
     </script>
 </head>
 <body>
-    <div id="header">
-        <div id="menuh">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="lists.html">Lists</a></li>
-                <li><a href="tables.html">Tables</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="images.html">Images</a></li>
-                <li><a href="audio.html">Audio</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="forms.html">Forms</a></li>
-                <li><a href="styling.html">Styling</a></li>
-            </ul>
-        </div>
-    </div>    
+    <div id="header"></div>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Load the header when the page loads
+        window.onload = loadHeader;
+    </script>
+   
     <h1>JavaScript</h1>
     <!-- <script>
     //     document.body.style.color = "white";
@@ -64,5 +72,21 @@
         </fieldset>
     </form>
 
+    <h2>Inner HTML demo</h2>
+    <form action = "">
+        <fieldset>
+        <label>Please type your name</label><p>
+        <input type = "text"
+        id = "txtName2" />
+        <button type = "button"
+        onclick = "sayHi()">
+        Click Me
+        </button>
+        </fieldset>
+        </form>
+        <div id = "divOutput">
+        Watch this space.
+        </div>
+        
 </body>
 </html>

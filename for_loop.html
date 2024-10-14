@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <script>
+        var output;
+        function init() {
+            output = document.getElementById("output");}
+        function count(){
+                output.innerHTML = "";
+                for (i = 1; i <= 10; i++) {output.innerHTML += i + "<br />";}
+            }
+        function back() {
+                output.innerHTML = "";
+                for (i = 10; i >0; i--) {output.innerHTML += i + "<br />";}
+            }
+        function byFive() {
+                output.innerHTML = "";
+                for (i=5; i <= 25; i += 5 ) {output.innerHTML += i + "<br />";}
+            }
+    </script>
+</head>
+<body onload="init()">
+    <div id="header"></div>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Load the header when the page loads
+        window.onload = loadHeader;
+    </script>
+    <h1>For Loop</h1>
+
+    <form action="">
+        <fieldset>
+            <button type="button" onclick="count()">Count to ten</button>
+            <button type="button" onclick="back()">Count backwards</button>
+            <button type="button" onclick="byFive()">Count by fives</button>
+        </fieldset>
+    </form>
+
+    <div id="output">Click a button to see some counting...</div>
+</body>
+</html>

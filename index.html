@@ -8,23 +8,21 @@
 <link rel="stylesheet" href="myStyle.css">
 </head>
 <body>
-    <div id="header">
-        <div id="menuh">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="lists.html">Lists</a></li>
-                <li><a href="tables.html">Tables</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="images.html">Images</a></li>
-                <li><a href="audio.html">Audio</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="forms.html">Forms</a></li>
-                <li><a href="styling.html">Styling</a></li>
-                <li><a href="javascript.html">JavaScript</a></li>
-            </ul>
-        </div>
-    </div>
-    
+    <div id="header"></div>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Load the header when the page loads
+        window.onload = loadHeader;
+    </script>
 
 
     <h1>This is my first web page!</h1>
@@ -33,6 +31,8 @@
     This is the first web page I've ever made, and I'm extremely proud of it.
     It is so cool!
     </p>
+
+ 
 
     <p id="xyz"> This paragraph is displaying differently and you can do this using ID. We also <em>emphasize</em> on one word and make a <strong>strong</strong> word.</p>
 
@@ -58,10 +58,34 @@
     <a href="forms.html">Forms</a> Understand how to create and insert forms.
 
     <h2>Styling</h2>
-    <a href="styling.html">Forms</a> Understand how to do styling with CSS.
+    <a href="styling.html">Styling</a> Understand how to do styling with CSS.
 
     <h2>JavaScript</h2>
-    <a href="javascript.html">Forms</a> Understand how to code with JavaScript.
+    <a href="javascript.html">JavaScript</a> Understand how to code with JavaScript.
+
+    <h2>JavaScript2</h2>
+    <a href="javascript2.html">JavaScript2</a> Understand how to code more with JavaScript.
+
+    <h2>For Loop</h2>
+    <a href="for_loop.html">For Loop</a> Understand how to use For Loop with JavaScript.
+
+    <h2>While Loop</h2>
+    <a href="while_loop.html">While Loop</a> Understand how to use While Loop with JavaScript.
+
+    <h2>Ants Function</h2>
+    <a href="antsFunctions.html">While Loop</a> Understand how to use a simple program using JavaScript.
+
+    <h2>Array</h2>
+    <a href="array.html">JavaScript2</a> Understand Array with JavaScript.
+
+    <h2>Objects</h2>
+    <a href="objects.html">For Loop</a> Understand objects with JavaScript.
+
+    <h2>2 Dimensional Array</h2>
+    <a href="2_dimensional_array.html">While Loop</a> Understand 2 Dimensional array with JavaScript.
+
+    <h2>Valid Input</h2>
+    <a href="getting_valid_input.html">While Loop</a> Understand getting valid input using JavaScript.
 
 </body>
 </html>

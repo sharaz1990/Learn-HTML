@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="myStyle.css">
 </head>
 <body>
-    <div id="header">
-        <div id="menuh">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="lists.html">Lists</a></li>
-                <li><a href="tables.html">Tables</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="images.html">Images</a></li>
-                <li><a href="audio.html">Audio</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="forms.html">Forms</a></li>
-                <li><a href="styling.html">Styling</a></li>
-            </ul>
-        </div>
-    </div>    
+    <div id="header"></div>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+        
+        // Load the header when the page loads
+        window.onload = loadHeader;
+    </script>
+  
     <h1>Video</h1>
 
 <video src="Aaj Ki Raat _ Stree 2 _ Tamannaah Bhatia _ Sachin-Jigar _ Madhubanti _ Divya _ Amitabh _ 15th August.mp4"
