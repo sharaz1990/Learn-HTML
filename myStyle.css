@@ -1,7 +1,7 @@
 /* myStyle.css */
 body{color: black; background-color: lightcyan;}
-h1{color: darkblue; background-color: lightblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 300%;}
-h2{color: darkgreen;}
+h1{color: rgb(0, 0, 0); background-color: lightblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 300%;}
+h2{color: rgb(0, 0, 0);}
 #xyz{font: 130% Garamond, Comic Sans MS, fantasy; text-align: center;}
 
 
